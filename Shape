@@ -1,0 +1,46 @@
+class Shape {
+    // These methods should be overridden by child classes
+    public double area() {
+        return 0.0;
+    }
+
+    public double parameter() {
+        return 0.0;
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    // Constructor to set the radius
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Override the area method to calculate the area of the circle
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+
+    // Override the parameter method to calculate the perimeter (circumference) of the circle
+    @Override
+    public double parameter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5.0);
+
+        // Calculate and print the area and perimeter of the circle
+        double circleArea = circle.area();
+        double circleParameter = circle.parameter();
+
+        System.out.println("Circle Area: " + circleArea);
+        System.out.println("Circle Parameter: " + circleParameter);
+    }
+}
+
+
