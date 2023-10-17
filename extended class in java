@@ -1,0 +1,17 @@
+
+// create a parent class shape with two methods area and perimeter.
+//extend by a circle class and over ride area and parameter
+
+class Shape{
+    public void area(){
+        System.out.println("Calculating area in parent class");
+        
+    }
+    public void parameter(){
+        System.out.println("Calculating parameter in parent class");
+        
+    }
+    class Circle extends Shape{
+        void display
+    }
+}
